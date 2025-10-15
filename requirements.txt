@@ -1,0 +1,21 @@
+# Requirements para busca_completa_patentscope.py
+
+# Web Scraping
+selenium==4.27.1
+beautifulsoup4==4.12.3
+requests==2.32.3
+
+# Data Processing
+pandas==2.2.3
+
+# Retry Logic
+tenacity==9.0.0
+
+# Environment Variables
+python-dotenv==1.0.1
+
+# Optional: LLM para geração de termos
+anthropic==0.40.0
+
+# Utilities
+lxml==5.3.0

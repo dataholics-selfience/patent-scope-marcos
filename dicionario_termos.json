@@ -1,0 +1,104 @@
+{
+  "_metadata": {
+    "versao": "1.0",
+    "ultima_atualizacao": "2025-09-24",
+    "descricao": "Dicionário de termos alternativos para busca no INPI",
+    "como_usar": "Cada termo principal mapeia para categoria, sinônimos, nomes comerciais, etc."
+  },
+  "termos_farmaceuticos": {
+    "ABEMACICLIB": {
+      "categoria": "Oncologia",
+      "classe_farmacologica": "Inibidor CDK4/6",
+      "indicacao": "Câncer de mama",
+      "sinonimos": ["abemaciclib", "Abemaciclib", "ABEMACICLIB"],
+      "nomes_comerciais": ["VERZENIO", "verzenio", "Verzenio"],
+      "mecanismo_acao": ["CDK4", "CDK6", "QUINASE", "CYCLIN"],
+      "area_terapeutica": ["ONCOLOGIA", "CANCER", "TUMOR", "NEOPLASIA"],
+      "indicacoes": ["CANCER MAMA", "BREAST CANCER", "MAMA", "CARCINOMA"],
+      "competidores": ["PALBOCICLIB", "RIBOCICLIB", "IBRANCE", "KISQALI"],
+      "fabricantes": ["LILLY", "ELI LILLY", "ELI LILLY AND COMPANY"],
+      "termos_tecnicos": ["CDK4/6", "CYCLIN", "KINASE", "CELL CYCLE"],
+      "termos_patente": ["LY2835219", "MOLECULE", "THERAPEUTIC METHOD", "TREATMENT", "COMPOSITION"],
+      "codigos_patente": ["WO2010", "BR0924183", "BR11", "PI"],
+      "tipos_patente": ["MOLECULA", "METODO TERAPEUTICO", "COMPOSICAO", "USO MEDICO"],
+      "prioridade": ["VERZENIO", "LY2835219", "CDK4/6", "THERAPEUTIC METHOD", "MOLECULE"]
+    },
+    "SEMAGLUTINA": {
+      "categoria": "Endocrinologia",
+      "classe_farmacologica": "Agonista GLP-1",
+      "indicacao": "Diabetes tipo 2",
+      "sinonimos": ["semaglutina", "SEMAGLUTIDE", "semaglutide"],
+      "nomes_comerciais": ["OZEMPIC", "WEGOVY", "RYBELSUS"],
+      "mecanismo_acao": ["GLP-1", "GLUCAGON", "PEPTIDEO"],
+      "area_terapeutica": ["DIABETES", "ENDOCRINA", "METABOLICA"],
+      "indicacoes": ["DIABETES TIPO 2", "OBESIDADE", "GLICEMIA"],
+      "competidores": ["LIRAGLUTIDA", "DULAGLUTIDA", "EXENATIDA"],
+      "fabricantes": ["NOVO NORDISK", "NOVARTIS"],
+      "termos_tecnicos": ["INCRETINA", "PEPTIDEO", "RECEPTOR GLP-1"],
+      "prioridade": ["OZEMPIC", "WEGOVY", "GLP-1", "DIABETES"]
+    },
+    "INSULINA": {
+      "categoria": "Endocrinologia",
+      "classe_farmacologica": "Hormônio pancreático",
+      "indicacao": "Diabetes",
+      "sinonimos": ["insulina", "insulin"],
+      "nomes_comerciais": ["HUMALOG", "LANTUS", "NOVOLOG", "NOVORAPID", "TRESIBA"],
+      "mecanismo_acao": ["HORMONIO", "PANCREAS", "GLICOSE"],
+      "area_terapeutica": ["DIABETES", "ENDOCRINA", "GLICEMIA"],
+      "indicacoes": ["DIABETES TIPO 1", "DIABETES TIPO 2", "HIPERGLICEMIA"],
+      "competidores": ["METFORMINA", "GLIBENCLAMIDA"],
+      "fabricantes": ["NOVO NORDISK", "LILLY", "SANOFI"],
+      "termos_tecnicos": ["PEPTIDEO C", "PROINSULINA", "RECEPTOR INSULINA"],
+      "prioridade": ["DIABETES", "GLICOSE", "HORMONIO", "PANCREAS"]
+    },
+    "VERZENIO": {
+      "categoria": "Oncologia",
+      "classe_farmacologica": "Inibidor CDK4/6",
+      "indicacao": "Câncer de mama",
+      "sinonimos": ["verzenio"],
+      "nomes_comerciais": ["VERZENIO"],
+      "mecanismo_acao": ["CDK4/6", "ABEMACICLIB"],
+      "area_terapeutica": ["ONCOLOGIA", "CANCER"],
+      "indicacoes": ["CANCER MAMA", "TUMOR MAMA"],
+      "competidores": ["IBRANCE", "KISQALI"],
+      "fabricantes": ["LILLY", "ELI LILLY"],
+      "termos_tecnicos": ["QUINASE", "CICLO CELULAR"],
+      "prioridade": ["ABEMACICLIB", "CDK4/6", "CANCER", "ONCOLOGIA"]
+    }
+  },
+  "categorias_gerais": {
+    "ONCOLOGIA": {
+      "termos_relacionados": ["CANCER", "TUMOR", "NEOPLASIA", "QUIMIOTERAPIA", "RADIOTERAPIA"],
+      "classes_farmacologicas": ["ANTINEOPLASICO", "CITOTOXICO", "IMUNOTERAPIA"]
+    },
+    "DIABETES": {
+      "termos_relacionados": ["GLICOSE", "GLICEMIA", "PANCREAS", "METABOLISMO"],
+      "classes_farmacologicas": ["HIPOGLICEMIANTE", "ANTIDIABETICO", "HORMONIO"]
+    },
+    "CARDIOVASCULAR": {
+      "termos_relacionados": ["CORACAO", "PRESSAO", "HIPERTENSAO", "COLESTEROL"],
+      "classes_farmacologicas": ["ANTI-HIPERTENSIVO", "ESTATINA", "DIURETICO"]
+    }
+  },
+  "padroes_busca": {
+    "variacoes_ortograficas": {
+      "regras": [
+        "Adicionar versão minúscula",
+        "Adicionar versão com primeira letra maiúscula",
+        "Remover hífen e espaços",
+        "Adicionar hífen em compostos"
+      ]
+    },
+    "expansoes_automaticas": {
+      "sufixos_farmaceuticos": ["®", "™", " FORMULA", " COMPRIMIDO", " INJECAO"],
+      "prefixos_genericos": ["GENERICO", "SIMILAR", "REFERENCIA"]
+    }
+  },
+  "configuracoes": {
+    "max_termos_por_busca": 8,
+    "priorizar_nomes_comerciais": true,
+    "incluir_competidores": true,
+    "usar_sinonimos_tecnicos": true,
+    "limite_por_categoria": 3
+  }
+}
