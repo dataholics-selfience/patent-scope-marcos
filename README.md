@@ -1,264 +1,292 @@
-# Pharmyrus v2 - Dashboard de Inteligência em Patentes Farmacêuticas
+# 🧪 Patent Scraper API - Molecule Search
 
-Sistema avançado para consulta e análise de patentes farmacêuticas com dados integrados de FDA, ensaios clínicos, e análise de patent cliff.
+API REST para busca de patentes no WIPO PatentScope usando fórmulas moleculares, SMILES ou nomes de moléculas.
 
-## 🚀 Funcionalidades
+## 🚀 Deploy Rápido na Railway
 
-### ✅ Versão Atual (Estática)
-- ✅ Autenticação com Firebase (cadastro com código de convite)
-- ✅ Consulta de patentes por múltiplos campos (nome, WO, IUPAC)
-- ✅ Visualização em tabela com filtros avançados
-- ✅ Cálculo de Patent Cliff
-- ✅ Dashboard executivo com métricas
-- ✅ Tab P&D com dados FDA e ensaios clínicos
-- ✅ Histórico de consultas salvo no Firebase
-- ✅ Detalhes completos de patentes
-- ✅ Sistema de paginação
-- ✅ Interface responsiva
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new)
 
-### 🔄 Próximas Versões (Com API)
-- 🔄 Integração com API WIPO
-- 🔄 Upload e análise de estruturas moleculares
-- 🔄 Desenho manual de moléculas
-- 🔄 Exportação para PDF
-- 🔄 Relatórios executivos personalizados
+### Passos para Deploy:
 
-## 📁 Estrutura do Projeto
+1. **Fork ou clone este repositório**
+   ```bash
+   git clone <seu-repo>
+   cd patent-api
+   ```
 
-```
-pharmyrus-v2/
-├── index.html              # Página de login/registro
-├── dashboard.html          # Dashboard principal
-├── css/
-│   ├── auth.css           # Estilos de autenticação
-│   └── dashboard.css      # Estilos do dashboard
-├── js/
-│   ├── firebase-config.js # Configuração Firebase
-│   ├── auth.js            # Lógica de autenticação
-│   ├── dashboard.js       # Lógica principal do dashboard
-│   └── patent-cliff.js    # Cálculo de patent cliff
-├── data/
-│   ├── paracetamol.json   # Dados estáticos (exemplo)
-│   ├── darolutamide.json  # Dados estáticos (exemplo)
-│   └── axitinib.json      # Dados estáticos (exemplo)
-├── _redirects             # Configuração Netlify
-└── README.md
-```
+2. **Crie novo projeto na Railway**
+   - Acesse [railway.app](https://railway.app)
+   - Clique em "New Project"
+   - Selecione "Deploy from GitHub repo"
+   - Escolha este repositório
 
-## 🔐 Firebase Setup
+3. **Deploy automático!**
+   - Railway detecta automaticamente `railway.json` e `Procfile`
+   - Build e deploy acontecem automaticamente
+   - URL pública será gerada (ex: `https://seu-app.railway.app`)
 
-### Projeto Firebase
-O projeto usa o **mesmo Firebase** do Pharmyrus v1:
-- **Project ID**: `pharmyrus-dashboard`
-- **Collections**:
-  - `users` - Usuários (compartilhada com v1)
-  - `searches_v2` - Histórico de consultas do v2 (exclusiva)
-  - `usage_stats_v2` - Estatísticas de uso do v2 (exclusiva)
+## 📋 Funcionalidades
 
-### Códigos de Convite Beta
-Códigos válidos para registro:
-- `PHARMYRUS2025`
-- `BETA2025`
-- `WIPO2025`
+✅ **Busca por molécula** - Fórmula molecular, SMILES ou nome  
+✅ **Paginação completa** - Navigate por milhares de resultados  
+✅ **Parser robusto** - Usa Parsel (Grok-like) para lidar com tags que mudam  
+✅ **API REST JSON** - Envie molécula, receba resultados em JSON  
+✅ **Retry automático** - Handling de erros e timeouts  
+✅ **Documentação interativa** - Swagger UI em `/docs`  
 
-## 🌐 Deploy no Netlify
+## 🔧 Uso Local
 
-### Opção 1: Netlify Drop (Mais Fácil)
-1. Acesse [Netlify Drop](https://app.netlify.com/drop)
-2. Arraste a pasta `pharmyrus-v2`
-3. Pronto! Seu site está no ar
+### Instalação
 
-### Opção 2: Netlify CLI
 ```bash
-# Instalar Netlify CLI
-npm install -g netlify-cli
+# Instalar dependências
+pip install -r requirements.txt
 
-# Deploy
-cd pharmyrus-v2
-netlify deploy --prod
+# Rodar servidor
+python -m uvicorn app.main:app --reload --port 8000
 ```
 
-### Opção 3: GitHub + Netlify (Deploy Automático)
-1. Faça push para GitHub
-2. Conecte o repositório no Netlify
-3. Deploy automático a cada commit
+Acesse: **http://localhost:8000/docs**
 
-## 📊 Dados Estáticos
+## 📖 Endpoints
 
-Por enquanto, o sistema usa dados estáticos em JSON para demonstração:
+### 1. Buscar Patentes por Molécula
 
-### Moléculas Disponíveis
-- **Paracetamol** - 0 patentes
-- **Darolutamide** - 166 patentes
-- **Axitinib** - Dados completos
+**POST /search**
 
-### Estrutura dos JSONs
+```bash
+curl -X POST "http://localhost:8000/search" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "molecule": "C6H12O6",
+    "search_type": "exact",
+    "page": 1,
+    "page_size": 10
+  }'
+```
+
+**Parâmetros:**
+- `molecule` (obrigatório): Fórmula molecular, SMILES ou nome
+- `search_type`: "exact", "similarity", "substructure" (padrão: "exact")
+- `page`: Número da página (padrão: 1)
+- `page_size`: Resultados por página (padrão: 10, máx: 100)
+
+**Resposta:**
 ```json
 {
-  "executive_summary": {
-    "molecule_name": "...",
-    "total_patents": 0,
-    "total_families": 0,
-    "fda_data": {...},
-    "clinical_trials_data": {...}
+  "status": "success",
+  "query": "C6H12O6",
+  "results": [
+    {
+      "patent_id": "WO2023123456",
+      "publication_number": "WO2023123456A1",
+      "title": "Novel glucose-based compound...",
+      "abstract": "The present invention relates to...",
+      "applicants": ["Company XYZ"],
+      "inventors": ["John Doe", "Jane Smith"],
+      "publication_date": "2023-06-29",
+      "ipc_codes": ["A61K31/00"],
+      "url": "https://patentscope.wipo.int/..."
+    }
+  ],
+  "pagination": {
+    "current_page": 1,
+    "page_size": 10,
+    "total_results": 156,
+    "total_pages": 16,
+    "has_next": true,
+    "has_previous": false,
+    "next_page": 2
   },
-  "search_result": {
-    "molecule": {...},
-    "patents": [...],
-    "families": [...]
+  "metadata": {
+    "search_type": "exact",
+    "duration_ms": 1234,
+    "scraped_at": "2024-01-15T10:30:00",
+    "source": "WIPO PatentScope"
   }
 }
 ```
 
-## 🔧 Migração para API
+### 2. Detalhes de Patente
 
-Quando a API estiver pronta, será necessário:
+**GET /patent/{patent_id}**
 
-1. **Atualizar `dashboard.js`**:
-```javascript
-// Substituir a função performSearch
-async function performSearch(params) {
-    const response = await fetch('https://api.pharmyrus.com/v2/search', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(params)
-    });
-    
-    const data = await response.json();
-    // ... resto do código permanece igual
-}
+```bash
+curl "http://localhost:8000/patent/WO2023123456"
 ```
 
-2. **Adicionar suporte para upload de imagens**:
-```javascript
-async function uploadMoleculeImage(file) {
-    const formData = new FormData();
-    formData.append('image', file);
-    
-    const response = await fetch('https://api.pharmyrus.com/v2/ocr', {
-        method: 'POST',
-        body: formData
-    });
-    
-    return await response.json();
-}
+### 3. Health Check
+
+**GET /health**
+
+```bash
+curl "http://localhost:8000/health"
 ```
 
-## 👥 Uso
+## 🐍 Exemplo em Python
 
-### 1. Registro
-1. Acesse a página inicial
-2. Clique em "Registre-se"
-3. Preencha os dados e use um código de convite válido
-4. Clique em "Registrar"
+```python
+import requests
 
-### 2. Login
-1. Use email e senha cadastrados
-2. Será redirecionado para o dashboard
-
-### 3. Consulta de Patentes
-1. Preencha pelo menos um campo de busca
-2. Clique em "Buscar"
-3. Visualize os resultados na tabela
-4. Use os filtros para refinar
-
-### 4. Patent Cliff
-- Calculado automaticamente
-- Mostra tempo até próxima expiração
-- Considera apenas patentes ativas
-
-### 5. Tab P&D
-- Dados FDA completos
-- Ensaios clínicos
-- Informações moleculares
-- Famílias de patentes
-
-### 6. Histórico
-- Todas as consultas são salvas
-- Clique em uma consulta para recarregá-la
-
-## 🎨 Personalização
-
-### Cores
-Edite as variáveis CSS em `css/dashboard.css`:
-```css
-:root {
-    --primary-color: #2563eb;
-    --primary-dark: #1e40af;
-    --success-color: #10b981;
-    /* ... */
-}
-```
-
-### Logo
-Adicione seu logo na pasta `images/` e atualize os HTMLs.
-
-## 🔒 Segurança
-
-- ✅ Autenticação Firebase
-- ✅ Validação de código de convite
-- ✅ Regras de segurança no Firestore
-- ✅ Collections separadas por versão
-- ✅ Dados do usuário protegidos
-
-### Regras do Firestore (Sugeridas)
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    // Users collection (compartilhada)
-    match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+# Buscar patentes
+response = requests.post(
+    "http://localhost:8000/search",
+    json={
+        "molecule": "aspirin",
+        "page": 1,
+        "page_size": 20
     }
-    
-    // Searches v2 (exclusiva)
-    match /searches_v2/{searchId} {
-      allow read, write: if request.auth != null && 
-                           resource.data.userId == request.auth.uid;
-    }
-    
-    // Usage stats v2 (admin only)
-    match /usage_stats_v2/{statId} {
-      allow read: if request.auth != null;
-      allow write: if false; // Only via Cloud Functions
-    }
-  }
-}
+)
+
+data = response.json()
+
+print(f"Total: {data['pagination']['total_results']} patentes")
+print(f"Página: {data['pagination']['current_page']}/{data['pagination']['total_pages']}")
+
+for patent in data['results']:
+    print(f"\n{patent['publication_number']}")
+    print(f"Título: {patent['title']}")
+    print(f"Aplicantes: {', '.join(patent['applicants'])}")
+    print(f"URL: {patent['url']}")
+
+# Navegar para próxima página
+if data['pagination']['has_next']:
+    next_page = data['pagination']['next_page']
+    response = requests.post(
+        "http://localhost:8000/search",
+        json={
+            "molecule": "aspirin",
+            "page": next_page,
+            "page_size": 20
+        }
+    )
 ```
 
-## 📱 Responsividade
+## 📊 Exemplos de Busca
 
-O dashboard é totalmente responsivo:
-- ✅ Desktop (1920px+)
-- ✅ Laptop (1024px - 1919px)
-- ✅ Tablet (768px - 1023px)
-- ✅ Mobile (320px - 767px)
+### Por Fórmula Molecular
+```json
+{"molecule": "C6H12O6"}
+{"molecule": "C9H8O4"}
+{"molecule": "CH4"}
+```
+
+### Por Nome da Molécula
+```json
+{"molecule": "glucose"}
+{"molecule": "aspirin"}
+{"molecule": "caffeine"}
+{"molecule": "penicillin"}
+```
+
+### Por SMILES
+```json
+{"molecule": "CC(=O)Oc1ccccc1C(=O)O"}
+{"molecule": "CN1C=NC2=C1C(=O)N(C(=O)N2C)C"}
+```
+
+## 🔍 Como Funciona
+
+1. **Input**: Você envia uma molécula (fórmula, SMILES ou nome)
+2. **Query Building**: API constrói query otimizada para PatentScope
+3. **Scraping**: Usa `httpx` (async) para fazer requisições
+4. **Parsing**: `Parsel` (Grok-like) extrai dados com múltiplos seletores
+5. **Paginação**: Calcula e retorna metadados de paginação
+6. **Output**: JSON estruturado com resultados
+
+### Parser Robusto com Parsel
+
+O parser usa **múltiplos seletores CSS/XPath** para cada campo, lidando com mudanças na estrutura HTML:
+
+```python
+# Exemplo: Buscar título com fallbacks
+title_selectors = [
+    '.title::text',
+    'h3::text',
+    '.patent-title::text',
+    'a[href*="docId"]::text',
+]
+
+for selector in title_selectors:
+    title = item.css(selector).get()
+    if title:
+        break
+```
+
+## 🛠️ Estrutura do Projeto
+
+```
+patent-api/
+├── app/
+│   ├── __init__.py        # Package init
+│   ├── main.py            # FastAPI app
+│   ├── models.py          # Pydantic models
+│   ├── parser.py          # HTML parser com Parsel
+│   └── scraper.py         # Scraping logic
+├── requirements.txt       # Dependências Python
+├── Procfile              # Railway/Heroku config
+├── railway.json          # Railway config
+├── runtime.txt           # Python version
+├── .env.example          # Environment vars
+├── .gitignore            # Git ignore
+└── README.md             # Esta documentação
+```
+
+## 📦 Dependências Principais
+
+- **FastAPI** - Framework web moderno e rápido
+- **httpx** - Cliente HTTP assíncrono
+- **Parsel** - Parser HTML robusto (usado no Scrapy)
+- **Pydantic** - Validação de dados
+- **uvicorn** - ASGI server
+
+## 🚨 Notas Importantes
+
+1. **Rate Limiting**: Implemente delays entre requisições para não sobrecarregar o servidor
+2. **Scraping Ético**: Use apenas para fins educacionais/pesquisa
+3. **Mudanças no Site**: O PatentScope pode mudar estrutura HTML - o parser usa múltiplos seletores para resiliência
+4. **Timeout**: Requisições têm timeout de 30s por padrão
 
 ## 🐛 Troubleshooting
 
-### Erro de autenticação
-- Verifique as credenciais do Firebase
-- Confirme que as regras do Firestore estão corretas
+### Erro: "No results found"
+- Tente uma molécula mais conhecida (ex: "aspirin")
+- Verifique se a fórmula está correta
+- Tente search_type diferente
 
-### Dados não carregam
-- Verifique o console do navegador
-- Confirme que os arquivos JSON estão na pasta `data/`
-- Teste com: `paracetamol`, `darolutamide` ou `axitinib`
+### Erro: "Timeout"
+- Aumente o timeout no scraper
+- Verifique sua conexão
+- PatentScope pode estar lento
 
-### Deploy no Netlify não funciona
-- Verifique se o arquivo `_redirects` está presente
-- Confirme que todos os arquivos CSS/JS estão no repositório
+### Erro na Railway
+- Verifique logs no dashboard da Railway
+- Certifique-se que PORT está correta
+- Verifique requirements.txt está completo
 
-## 📧 Suporte
+## 📝 TODO
 
-Para dúvidas ou problemas:
-- Email: suporte@pharmyrus.com
-- GitHub Issues: [pharmyrus-v2/issues]
+- [ ] Adicionar cache com Redis
+- [ ] Implementar rate limiting
+- [ ] Adicionar mais fontes de patentes (USPTO, EPO)
+- [ ] Suporte a estruturas químicas visuais
+- [ ] Export para CSV/Excel
+- [ ] Filtros avançados (data, país, etc.)
 
 ## 📄 Licença
 
-© 2025 Pharmyrus. Todos os direitos reservados.
+MIT License - Use livremente!
+
+## 🤝 Contribuindo
+
+Pull requests são bem-vindos! Para mudanças grandes, abra uma issue primeiro.
+
+## 📞 Suporte
+
+- Documentação: `/docs` ou `/redoc`
+- Issues: GitHub Issues
+- Email: seu@email.com
 
 ---
 
-**Desenvolvido com ❤️ pela equipe Pharmyrus**
+**Feito com ❤️ e FastAPI**
