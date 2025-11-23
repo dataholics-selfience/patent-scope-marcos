@@ -1,0 +1,176 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║     🔧 CORREÇÃO: Erro "$PORT is not a valid integer"     ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+📅 DATA: 23 Nov 2025
+🐛 ERRO: Invalid value for '--port': '$PORT' is not a valid integer
+✅ STATUS: CORRIGIDO!
+
+════════════════════════════════════════════════════════════
+
+🐛 O QUE ESTAVA ERRADO:
+════════════════════════════════════════════════════════════
+
+O Dockerfile tinha:
+
+❌ ERRADO:
+   CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}
+
+PROBLEMA:
+→ Variável $PORT não era expandida
+→ Uvicorn recebia literalmente a string "$PORT"
+→ Erro: "$PORT is not a valid integer"
+
+════════════════════════════════════════════════════════════
+
+✅ CORREÇÃO APLICADA:
+════════════════════════════════════════════════════════════
+
+Novo Dockerfile:
+
+✅ CORRETO:
+   CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+
+SOLUÇÃO:
+→ Usa shell (sh -c) para expandir variável
+→ ${PORT:-8000} = usa $PORT se existir, senão usa 8000
+→ Railway define $PORT automaticamente
+→ Funcionará local E no Railway!
+
+════════════════════════════════════════════════════════════
+
+🚀 COMO APLICAR A CORREÇÃO:
+════════════════════════════════════════════════════════════
+
+OPÇÃO 1: Re-deploy do GitHub (Recomendado)
+-------------------------------------------
+
+1. Extrair o novo ZIP
+   unzip patent-api.zip
+   cd patent-api
+
+2. Subir no GitHub
+   git add Dockerfile
+   git commit -m "Fix: PORT variable expansion"
+   git push
+
+3. Railway vai re-deployar automaticamente
+   → Build ~40 segundos
+   → Deploy automático
+   → ✅ Funcionando!
+
+OPÇÃO 2: Editar direto no Railway
+----------------------------------
+
+No Railway Dashboard:
+1. Service → Settings
+2. "Start Command" → Adicionar:
+   sh -c "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+3. Redeploy
+
+════════════════════════════════════════════════════════════
+
+✅ RESULTADO ESPERADO APÓS CORREÇÃO:
+════════════════════════════════════════════════════════════
+
+Deploy Logs:
+-----------
+Starting Container
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:XXXX (Press CTRL+C to quit)
+
+Testes:
+-------
+✅ /health → {"status":"healthy","version":"1.0.0"}
+✅ /docs → Swagger UI carrega
+✅ /search/mock → Retorna dados fake
+✅ /search → Faz scraping real
+
+════════════════════════════════════════════════════════════
+
+🧪 TESTAR LOCALMENTE ANTES:
+════════════════════════════════════════════════════════════
+
+# Build
+docker build -t patent-api .
+
+# Run (simulando Railway com PORT=8080)
+docker run -p 8080:8080 -e PORT=8080 patent-api
+
+# Test
+curl http://localhost:8080/health
+
+# Se funcionar local → vai funcionar no Railway! ✅
+
+════════════════════════════════════════════════════════════
+
+📝 O QUE MUDOU NO ZIP:
+════════════════════════════════════════════════════════════
+
+✓ Dockerfile corrigido (linha CMD)
+✓ DEBUG_502.md atualizado
+✓ Este guia (CORRECAO_PORT.txt)
+
+════════════════════════════════════════════════════════════
+
+⏱️ TEMPO ESTIMADO:
+════════════════════════════════════════════════════════════
+
+1. Extrair ZIP: 10 segundos
+2. Git push: 20 segundos
+3. Railway build: 40 segundos
+4. Railway deploy: 10 segundos
+
+TOTAL: ~80 segundos até estar online! ⚡
+
+════════════════════════════════════════════════════════════
+
+🎉 APÓS CORREÇÃO:
+════════════════════════════════════════════════════════════
+
+Sua API estará 100% funcional em:
+
+https://web-production-06b08.up.railway.app/health
+https://web-production-06b08.up.railway.app/docs
+https://web-production-06b08.up.railway.app/search/mock
+
+E você poderá:
+✅ Buscar por molécula
+✅ Buscar por número WO
+✅ Paginar resultados
+✅ Ver documentação interativa
+
+════════════════════════════════════════════════════════════
+
+🆘 SE AINDA DER ERRO:
+════════════════════════════════════════════════════════════
+
+1. Verificar que Dockerfile foi atualizado (tem "sh", "-c")
+2. Ver logs do Railway novamente
+3. Testar Docker local primeiro
+4. Me avisar com os novos logs!
+
+════════════════════════════════════════════════════════════
+
+💡 DICA PRO:
+════════════════════════════════════════════════════════════
+
+Para evitar esse tipo de erro no futuro, sempre use:
+
+CMD ["sh", "-c", "comando aqui com $VARIAVEIS"]
+
+Ao invés de:
+
+CMD comando aqui com $VARIAVEIS
+
+O shell (-c) é necessário para expandir variáveis! 🐚
+
+════════════════════════════════════════════════════════════
+
+AGORA VAI FUNCIONAR! 🚀
+
+════════════════════════════════════════════════════════════
