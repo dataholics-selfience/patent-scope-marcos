@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmyrus v2 - Painel Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="images/logo.png" alt="Pharmyrus" class="logo-navbar">
+            <span class="admin-badge">ADMIN</span>
+        </div>
+        <div class="nav-menu">
+            <span id="userName" class="user-name"></span>
+            <button id="backToDashboard" class="btn btn-secondary">Dashboard</button>
+            <button id="logoutBtn" class="btn btn-secondary">Sair</button>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="overview">Visão Geral</button>
+            <button class="tab-btn" data-tab="invites">Códigos de Convite</button>
+            <button class="tab-btn" data-tab="users">Usuários</button>
+            <button class="tab-btn" data-tab="contracts">Contratos/Consultas</button>
+            <button class="tab-btn" data-tab="stats">Estatísticas</button>
+        </div>
+
+        <!-- Overview Tab -->
+        <div id="overviewTab" class="tab-content active">
+            <h2>Visão Geral do Sistema</h2>
+            
+            <div class="summary-cards">
+                <div class="card">
+                    <h3 id="totalUsers">0</h3>
+                    <p>Total de Usuários</p>
+                </div>
+                <div class="card">
+                    <h3 id="activeUsers">0</h3>
+                    <p>Usuários Ativos (30 dias)</p>
+                </div>
+                <div class="card">
+                    <h3 id="totalSearches">0</h3>
+                    <p>Total de Consultas</p>
+                </div>
+                <div class="card">
+                    <h3 id="searchesToday">0</h3>
+                    <p>Consultas Hoje</p>
+                </div>
+                <div class="card">
+                    <h3 id="activeInvites">0</h3>
+                    <p>Convites Ativos</p>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3>Atividade Recente</h3>
+                <div id="activityList" class="activity-list">
+                    <!-- Activity items will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Invites Tab -->
+        <div id="invitesTab" class="tab-content">
+            <h2>Gerenciamento de Códigos de Convite</h2>
+            
+            <div class="section">
+                <h3>Criar Novo Código</h3>
+                <form id="createInviteForm" class="invite-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inviteCode">Código de Convite</label>
+                            <input type="text" id="inviteCode" required placeholder="Ex: PHARMYRUS2025">
+                        </div>
+                        <div class="form-group">
+                            <label for="inviteLimit">Limite de Usos (0 = ilimitado)</label>
+                            <input type="number" id="inviteLimit" min="0" value="0">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inviteExpiry">Data de Expiração (opcional)</label>
+                            <input type="date" id="inviteExpiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="inviteDescription">Descrição</label>
+                            <input type="text" id="inviteDescription" placeholder="Ex: Beta Testers - Janeiro 2025">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Criar Código</button>
+                </form>
+            </div>
+
+            <div class="section">
+                <h3>Códigos Ativos</h3>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Descrição</th>
+                                <th>Usos</th>
+                                <th>Limite</th>
+                                <th>Expira em</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invitesTableBody">
+                            <!-- Invites will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Users Tab -->
+        <div id="usersTab" class="tab-content">
+            <h2>Usuários Cadastrados</h2>
+            
+            <div class="filters">
+                <input type="text" id="searchUsers" placeholder="Buscar por nome ou email...">
+                <select id="filterUserRole">
+                    <option value="">Todos os Roles</option>
+                    <option value="beta_user">Beta User</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <select id="filterUserVersion">
+                    <option value="">Todas Versões</option>
+                    <option value="v1">v1</option>
+                    <option value="v2">v2</option>
+                </select>
+            </div>
+
+            <div class="table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Código Usado</th>
+                            <th>Cadastro</th>
+                            <th>Último Acesso</th>
+                            <th>Consultas</th>
+                            <th>Versão</th>
+                            <th>Role</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        <!-- Users will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Contracts Tab -->
+        <div id="contractsTab" class="tab-content">
+            <h2>Contratos e Consultas</h2>
+            
+            <div class="filters">
+                <input type="text" id="searchContracts" placeholder="Buscar por molécula ou usuário...">
+                <select id="filterVersion">
+                    <option value="">Todas Versões</option>
+                    <option value="v1">v1 (searches)</option>
+                    <option value="v2">v2 (searches_v2)</option>
+                </select>
+                <input type="date" id="filterDateFrom" placeholder="Data Início">
+                <input type="date" id="filterDateTo" placeholder="Data Fim">
+                <button id="applyContractFilters" class="btn btn-primary">Aplicar</button>
+                <button id="clearContractFilters" class="btn btn-secondary">Limpar</button>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-card">
+                    <span id="contractsV1">0</span>
+                    <label>Consultas v1</label>
+                </div>
+                <div class="stat-card">
+                    <span id="contractsV2">0</span>
+                    <label>Consultas v2</label>
+                </div>
+                <div class="stat-card">
+                    <span id="contractsTotal">0</span>
+                    <label>Total</label>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Data/Hora</th>
+                            <th>Usuário</th>
+                            <th>Molécula</th>
+                            <th>Patentes</th>
+                            <th>Famílias</th>
+                            <th>Versão</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contractsTableBody">
+                        <!-- Contracts will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="contractsPagination" class="pagination"></div>
+        </div>
+
+        <!-- Stats Tab -->
+        <div id="statsTab" class="tab-content">
+            <h2>Estatísticas de Uso</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-section">
+                    <h3>Consultas por Versão</h3>
+                    <canvas id="versionChart"></canvas>
+                </div>
+
+                <div class="stat-section">
+                    <h3>Consultas por Período</h3>
+                    <canvas id="timeChart"></canvas>
+                </div>
+
+                <div class="stat-section">
+                    <h3>Moléculas Mais Consultadas</h3>
+                    <div id="topMolecules" class="top-list">
+                        <!-- Will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <div class="stat-section">
+                    <h3>Usuários Mais Ativos</h3>
+                    <div id="topUsers" class="top-list">
+                        <!-- Will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="export-section">
+                <h3>Exportar Dados</h3>
+                <button id="exportAllContracts" class="btn btn-success">Exportar Todos Contratos (PDF)</button>
+                <button id="exportStats" class="btn btn-success">Exportar Estatísticas (Excel)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contract Details Modal -->
+    <div id="contractModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="contractModalTitle">Detalhes da Consulta</h2>
+            <div id="contractModalBody" class="modal-body">
+                <!-- Contract details will be loaded here -->
+            </div>
+            <div class="modal-footer">
+                <button id="downloadContractPdf" class="btn btn-primary">Baixar PDF</button>
+                <button id="closeContractModal" class="btn btn-secondary">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    
+    <!-- jsPDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,2017 @@
+{
+  "executive_summary": {
+    "molecule_name": "paracetamol",
+    "generic_name": "paracetamol",
+    "commercial_name": "Paracetamol",
+    "total_patents": 0,
+    "total_families": 0,
+    "jurisdictions": {
+      "brazil": 0,
+      "usa": 0,
+      "europe": 0
+    },
+    "patent_types": {
+      "product": 0,
+      "process": 0,
+      "formulation": 0,
+      "use": 0
+    },
+    "consistency_score": 0.425,
+    "fda_data": {
+      "molecule_name": "paracetamol",
+      "fda_approval_status": null,
+      "fda_applications": [],
+      "marketing_status": null,
+      "approval_date": null,
+      "approval_type": null,
+      "sponsor": null,
+      "indications": [],
+      "dosage_forms": [],
+      "routes_of_administration": [],
+      "active_ingredients": [],
+      "product_numbers": [],
+      "reference_drug": false,
+      "labeling": {
+        "warnings": [],
+        "adverse_reactions": [],
+        "contraindications": [],
+        "drug_interactions": [],
+        "dosage_administration": null,
+        "mechanism_of_action": null,
+        "pharmacokinetics": null,
+        "pharmacodynamics": null
+      },
+      "patent_exclusivity": {
+        "patents": [],
+        "exclusivity_periods": [],
+        "generic_availability": null,
+        "first_generic_approval": null
+      },
+      "regulatory_history": [],
+      "post_market_requirements": [],
+      "risk_evaluation": null,
+      "data_source": "FDA APIs",
+      "fetch_timestamp": "2025-11-19T16:49:26.040847"
+    },
+    "clinical_trials_data": {
+      "molecule_name": "paracetamol",
+      "total_trials": 100,
+      "trials_by_phase": {
+        "Phase 1": 0,
+        "Phase 2": 0,
+        "Phase 3": 0,
+        "Phase 4": 0,
+        "Not Applicable": 100
+      },
+      "trials_by_status": {
+        "Recruiting": 0,
+        "Active, not recruiting": 0,
+        "Completed": 0,
+        "Terminated": 0,
+        "Suspended": 0,
+        "Withdrawn": 0,
+        "Not yet recruiting": 0,
+        "Enrolling by invitation": 0,
+        "Unknown": 100
+      },
+      "trials_by_intervention": {
+        "Unknown": 215
+      },
+      "conditions_studied": [],
+      "primary_sponsors": [
+        "MAHAN Trust",
+        "Allodynic Therapeutics, Inc",
+        "University of Bergen",
+        "National Taiwan University Hospital",
+        "Napp Pharmaceuticals Limited",
+        "Zagazig University",
+        "Merck Sharp & Dohme LLC",
+        "University Hospital, Toulouse",
+        "Cumberland Pharmaceuticals",
+        "Purdue Pharma LP",
+        "AbbVie (prior sponsor, Abbott)",
+        "University Hospital, Basel, Switzerland",
+        "Grupo Rehabilitacion en Salud",
+        "Stony Brook University",
+        "University of Illinois at Chicago",
+        "Genzyme, a Sanofi Company",
+        "Assaf-Harofeh Medical Center",
+        "HALEON",
+        "Rosalind Franklin University of Medicine and Science",
+        "Seyed Mehdi Pourafzali"
+      ],
+      "countries": [
+        "Israel",
+        "Italy",
+        "Ukraine",
+        "South Africa",
+        "Kuwait",
+        "India",
+        "Switzerland",
+        "Poland",
+        "Lithuania",
+        "Spain",
+        "Canada",
+        "Brazil",
+        "Norway",
+        "South Korea",
+        "Belgium",
+        "United Kingdom",
+        "Denmark",
+        "Germany",
+        "Singapore",
+        "France",
+        "Pakistan",
+        "Czechia",
+        "Bangladesh",
+        "Turkey (TÃ¼rkiye)",
+        "Netherlands",
+        "Saudi Arabia",
+        "Egypt",
+        "Hong Kong",
+        "United States",
+        "Taiwan",
+        "Guatemala",
+        "Romania",
+        "Japan",
+        "Reunion",
+        "Colombia",
+        "Argentina",
+        "China"
+      ],
+      "trial_details": [
+        {
+          "nct_id": "NCT00496015",
+          "title": "Prophylactic Antipyretic Treatment in Children Receiving Booster Dose of Pneumococcal Conjugate Vaccine GSK1024850A",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE3",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Pneumococcal conjugate vaccine GSK1024850A.",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Infanrix hexa.",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Meningococcal vaccine GSK134612.",
+              "description": ""
+            }
+          ],
+          "start_date": "2007-07-02",
+          "completion_date": "2009-02-17",
+          "enrollment": 750,
+          "primary_sponsor": "GlaxoSmithKline",
+          "has_results": true,
+          "primary_outcome": "Number of Subjects Reported With Core Fever (Rectal Temperature) Greater Than or Equal to (â‰¥) the Cut-off",
+          "countries": [
+            "Czechia",
+            "Czechia",
+            "Czechia",
+            "Czechia",
+            "Czechia",
+            "Czechia",
+            "Czechia",
+            "Czechia",
+            "Czechia",
+            "Czechia"
+          ]
+        },
+        {
+          "nct_id": "NCT03510910",
+          "title": "Multimodal Analgesia With Acetaminophen vs. Narcotics Alone After Hip Arthroscopy",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Acetaminophen",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Percocet",
+              "description": ""
+            }
+          ],
+          "start_date": "2018-04-10",
+          "completion_date": "2019-12-01",
+          "enrollment": 100,
+          "primary_sponsor": "NYU Langone Health",
+          "has_results": true,
+          "primary_outcome": "Patient Satisfaction",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT02400580",
+          "title": "IV Acetaminophen for Postoperative Pain Analgesia After Laparoscopic Hysterectomy",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "IV acetaminophen",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "placebo",
+              "description": ""
+            }
+          ],
+          "start_date": "2015-02",
+          "completion_date": "2016-09",
+          "enrollment": 183,
+          "primary_sponsor": "University of Pittsburgh",
+          "has_results": true,
+          "primary_outcome": "Postoperative Pain",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT06473896",
+          "title": "Effect of Ketalar or Dexmedetomidine on Increased Sensitivity to Pain Following Treatment With Remifentanil",
+          "overall_status": "RECRUITING",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Ketalar",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Dexmedetomidine",
+              "description": ""
+            }
+          ],
+          "start_date": "2024-04-18",
+          "completion_date": "2026-08-30",
+          "enrollment": 90,
+          "primary_sponsor": "Assaf-Harofeh Medical Center",
+          "has_results": false,
+          "primary_outcome": "Pain Level",
+          "countries": [
+            "Israel"
+          ]
+        },
+        {
+          "nct_id": "NCT02205489",
+          "title": "Management Of The Infusion-Associated Reactions In RRMS Patients Treated With LEMTRADA",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Alemtuzumab GZ402673",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "cetirizine",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "ranitidine",
+              "description": ""
+            }
+          ],
+          "start_date": "2014-10",
+          "completion_date": "2016-04",
+          "enrollment": 58,
+          "primary_sponsor": "Genzyme, a Sanofi Company",
+          "has_results": false,
+          "primary_outcome": "Proportion of IARs that are graded mild according to the Common Toxicity Criteria (CTC). An IAR is any adverse event occurring during or within 24 hours of LEMTRADA infusion.",
+          "countries": [
+            "Belgium",
+            "Belgium",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "Netherlands",
+            "Netherlands",
+            "Spain",
+            "Spain",
+            "Spain",
+            "Spain",
+            "Spain",
+            "Spain"
+          ]
+        },
+        {
+          "nct_id": "NCT04147013",
+          "title": "Effect of Celecoxib on Postoperative Analgesia and Disease Severity in AERD Patients with CRS",
+          "overall_status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Celecoxib",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Placebo",
+              "description": ""
+            }
+          ],
+          "start_date": "2020-02-18",
+          "completion_date": "2026-07",
+          "enrollment": 44,
+          "primary_sponsor": "London Health Sciences Centre Research Institute OR Lawson Research Institute of St. Joseph's",
+          "has_results": false,
+          "primary_outcome": "Post FESS changes in the Lund-Kennedy Endoscopic Score (LKES)",
+          "countries": [
+            "Canada",
+            "Saudi Arabia"
+          ]
+        },
+        {
+          "nct_id": "NCT04314050",
+          "title": "Comparison of Tramadol and Dexmedetomidine in the Prevention of Urinary Catheter Discomfort in Urinary Surgery",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Tramadol",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Dexmedetomidine",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "control",
+              "description": ""
+            }
+          ],
+          "start_date": "2020-03-10",
+          "completion_date": "2020-07-10",
+          "enrollment": 135,
+          "primary_sponsor": "Ankara Diskapi Training and Research Hospital",
+          "has_results": false,
+          "primary_outcome": "the severity of CRBD",
+          "countries": [
+            "Turkey (TÃ¼rkiye)"
+          ]
+        },
+        {
+          "nct_id": "NCT04688788",
+          "title": "Non-inferiority Study of Ocrelizumab and Rituximab in Active Multiple Sclerosis",
+          "overall_status": "ACTIVE_NOT_RECRUITING",
+          "phase": "PHASE3",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Rituximab",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Ocrelizumab",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Fexofenadine",
+              "description": ""
+            }
+          ],
+          "start_date": "2021-04-28",
+          "completion_date": "2029-05-05",
+          "enrollment": 600,
+          "primary_sponsor": "Rigshospitalet, Denmark",
+          "has_results": false,
+          "primary_outcome": "Percentage of patients without new or enlarging T2 white matter lesions on brain MRI scans",
+          "countries": [
+            "Denmark",
+            "Denmark",
+            "Denmark",
+            "Denmark",
+            "Denmark",
+            "Denmark",
+            "Denmark",
+            "Denmark",
+            "Denmark",
+            "Denmark",
+            "Denmark"
+          ]
+        },
+        {
+          "nct_id": "NCT06757140",
+          "title": "Opioid Drug Interaction Study",
+          "overall_status": "RECRUITING",
+          "phase": "PHASE1",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Alprazolam",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Oxycodone",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Placebo",
+              "description": ""
+            }
+          ],
+          "start_date": "2025-04-01",
+          "completion_date": "2029-06-01",
+          "enrollment": 25,
+          "primary_sponsor": "Shanna Babalonis, PhD",
+          "has_results": false,
+          "primary_outcome": "Change in Subject-Rated Outcome: Visual Analog Scale (VAS) Drug Liking",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT01394718",
+          "title": "Analgesic Efficacy of Repeated Doses of Intravenous (IV) Acetaminophen in Post-operative Pediatric Spine Fusion Patients",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE3",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Intravenous Acetaminophen",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Placebo",
+              "description": ""
+            }
+          ],
+          "start_date": "2011-07",
+          "completion_date": "2015-07",
+          "enrollment": 67,
+          "primary_sponsor": "Children's Hospital of Philadelphia",
+          "has_results": true,
+          "primary_outcome": "Total Opiate Requirement",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT05515718",
+          "title": "Effect of the Early Ultrasound-guided Femoral Nerve Block Performed by Emergency Physicians on Pre-operative Opioids Usage in Patients With Proximal Femoral Fractures",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Standard pain management",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Femoral nerve block",
+              "description": ""
+            }
+          ],
+          "start_date": "2022-09-07",
+          "completion_date": "2022-12-31",
+          "enrollment": 35,
+          "primary_sponsor": "Fondation HÃ´pital Saint-Joseph",
+          "has_results": false,
+          "primary_outcome": "Advantage of the echo-guided femoral nerve block",
+          "countries": [
+            "France"
+          ]
+        },
+        {
+          "nct_id": "NCT04745520",
+          "title": "Randomized Clinical Trial of Rib Fixation Versus Medical Analgesia in Uncomplicated Rib Fractures on Pain Control.",
+          "overall_status": "TERMINATED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Rib fixation",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Analgesia",
+              "description": ""
+            }
+          ],
+          "start_date": "2021-03-12",
+          "completion_date": "2024-09-16",
+          "enrollment": 102,
+          "primary_sponsor": "BenoÃ®t BÃ©dat",
+          "has_results": false,
+          "primary_outcome": "Pain severity",
+          "countries": [
+            "Switzerland"
+          ]
+        },
+        {
+          "nct_id": "NCT03262805",
+          "title": "To Assess the LancononeÂ® (E-OA-07) Efficacy in Physical Activity-related Pain- LEAP Study",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Lanconone",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Placebo",
+              "description": ""
+            }
+          ],
+          "start_date": "2017-08-28",
+          "completion_date": "2018-01-30",
+          "enrollment": 73,
+          "primary_sponsor": "Vedic Lifesciences Pvt. Ltd.",
+          "has_results": false,
+          "primary_outcome": "WOMAC pain score.",
+          "countries": [
+            "India",
+            "India",
+            "India"
+          ]
+        },
+        {
+          "nct_id": "NCT03103022",
+          "title": "Combination of Acetaminophen and Ibuprofen in the Management of Patent Ductus Arteriosus",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE1",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Acetaminophen",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "ibuprofen",
+              "description": ""
+            }
+          ],
+          "start_date": "2017-06-12",
+          "completion_date": "2019-04-30",
+          "enrollment": 20,
+          "primary_sponsor": "University of Florida",
+          "has_results": false,
+          "primary_outcome": "Ductal closing rate",
+          "countries": [
+            "United States",
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT04574791",
+          "title": "Addition of Muscle Relaxants in a Multimodal Analgesic Regimen for Analgesia After Primary Total Knee Arthroplasty",
+          "overall_status": "UNKNOWN",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "TiZANidine 2 MG Oral Capsule",
+              "description": ""
+            }
+          ],
+          "start_date": "2020-09-03",
+          "completion_date": "2021-09-30",
+          "enrollment": 240,
+          "primary_sponsor": "Rothman Institute Orthopaedics",
+          "has_results": false,
+          "primary_outcome": "opioid consumption (MME) postoperatively",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT04494438",
+          "title": "Rituximab for Idiopathic Nephrotic Syndrome",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE3",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Rituximab",
+              "description": ""
+            }
+          ],
+          "start_date": "2013-07",
+          "completion_date": "2016-12",
+          "enrollment": 30,
+          "primary_sponsor": "Istituto Giannina Gaslini",
+          "has_results": false,
+          "primary_outcome": "Three months proteinuria",
+          "countries": [
+            "Italy"
+          ]
+        },
+        {
+          "nct_id": "NCT00970450",
+          "title": "The Central Analgesic Effects of Paracetamol on Serotonergic Pathways",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Paracetamol",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Tropisetron",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Placebo",
+              "description": ""
+            }
+          ],
+          "start_date": "2009-11",
+          "completion_date": "2010-04",
+          "enrollment": 16,
+          "primary_sponsor": "University Hospital, Basel, Switzerland",
+          "has_results": false,
+          "primary_outcome": "Pain",
+          "countries": [
+            "Switzerland"
+          ]
+        },
+        {
+          "nct_id": "NCT04372082",
+          "title": "Hydroxychloroquine or Diltiazem-Niclosamide for the Treatment of COVID-19",
+          "overall_status": "WITHDRAWN",
+          "phase": "PHASE3",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Standard of care (SOC)",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Hydroxychloroquine",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Association of diltiazem and niclosamide",
+              "description": ""
+            }
+          ],
+          "start_date": "2020-05",
+          "completion_date": "2023-05",
+          "enrollment": 0,
+          "primary_sponsor": "University Hospital, Lille",
+          "has_results": false,
+          "primary_outcome": "death",
+          "countries": []
+        },
+        {
+          "nct_id": "NCT02473796",
+          "title": "Home Based Child Care to Reduce Mortality and Malnutrition in Tribal Children of Melghat, India: CRCT",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Home based child care",
+              "description": ""
+            }
+          ],
+          "start_date": "2004-01",
+          "completion_date": "2010-04",
+          "enrollment": 7594,
+          "primary_sponsor": "MAHAN Trust",
+          "has_results": false,
+          "primary_outcome": "Under-5 mortality rate",
+          "countries": [
+            "India"
+          ]
+        },
+        {
+          "nct_id": "NCT01906762",
+          "title": "Comparing the Analgesic Effect of Intravenous Acetaminophen and Morphine on Patients With Renal Colic Pain Reffering to the Emergency Department: A Randomized Controlled Trial",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE2",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Acetaminophen",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Morphine",
+              "description": ""
+            }
+          ],
+          "start_date": "2012-07",
+          "completion_date": "2013-04",
+          "enrollment": 124,
+          "primary_sponsor": "Seyed Mehdi Pourafzali",
+          "has_results": false,
+          "primary_outcome": "Pain",
+          "countries": []
+        },
+        {
+          "nct_id": "NCT04229576",
+          "title": "TENS Efficacy in Pain Relief During Hysteroscopy",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "TENs",
+              "description": ""
+            }
+          ],
+          "start_date": "2019-03-01",
+          "completion_date": "2019-08-30",
+          "enrollment": 120,
+          "primary_sponsor": "Ain Shams University",
+          "has_results": false,
+          "primary_outcome": "Level of pain:visual analog scale",
+          "countries": [
+            "Egypt"
+          ]
+        },
+        {
+          "nct_id": "NCT02640118",
+          "title": "The Impact of Lixisenatide on Postprandial Glucose Tolerance in Pancreatectomised Subjects",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Lixisenatide",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Lixisenatide-Placebo",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Standardized liquid meal",
+              "description": ""
+            }
+          ],
+          "start_date": "2015-08",
+          "completion_date": "2016-07",
+          "enrollment": 24,
+          "primary_sponsor": "University Hospital, Gentofte, Copenhagen",
+          "has_results": false,
+          "primary_outcome": "PPG excursions measured as incremental area under curve (iAUC)",
+          "countries": []
+        },
+        {
+          "nct_id": "NCT06855576",
+          "title": "Bioequivalence Study of Paracetamol With Oral Single Dose Administration in Healthy Adult Subjects Under Fasting Conditions",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE1",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Paracetamol ODT",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Alvedon film-coated tablet",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Panadol film-coated Tablet",
+              "description": ""
+            }
+          ],
+          "start_date": "2025-03-05",
+          "completion_date": "2025-04-17",
+          "enrollment": 54,
+          "primary_sponsor": "HALEON",
+          "has_results": false,
+          "primary_outcome": "Maximum Observed Concentration (Cmax) for Paracetamol ODT (Test) Versus (Vs) Paracetamol (Alvedon Film-coated Tablet) (Reference 1)",
+          "countries": [
+            "Germany"
+          ]
+        },
+        {
+          "nct_id": "NCT06694246",
+          "title": "Improving Outpatient Endometrial Biopsy Results",
+          "overall_status": "RECRUITING",
+          "phase": "Not Applicable",
+          "study_type": "OBSERVATIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Improving technique",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Using hysteroscopy in candidate patients",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Analgesia",
+              "description": ""
+            }
+          ],
+          "start_date": "2024-11-01",
+          "completion_date": "2025-04-30",
+          "enrollment": 400,
+          "primary_sponsor": "Cairo University",
+          "has_results": false,
+          "primary_outcome": "Adequacy of the sampled endometrial specimen for histopathology diagnosis",
+          "countries": [
+            "Kuwait"
+          ]
+        },
+        {
+          "nct_id": "NCT02891174",
+          "title": "The Effect of Ibuprofen on Post-partum Blood Pressure in Women With Hypertensive Disorders of Pregnancy",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Ibuprofen",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Acetaminophen",
+              "description": ""
+            }
+          ],
+          "start_date": "2016-12-01",
+          "completion_date": "2018-06-20",
+          "enrollment": 74,
+          "primary_sponsor": "University of Michigan",
+          "has_results": true,
+          "primary_outcome": "Difference in Systolic Blood Pressure (SBP)",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT01374269",
+          "title": "Improvement in Pain,Function and HRQoL ( Health Related Quality of Life) in Subacute Low Back Pain: A Controlled Clinical Trial of Exercise vs NSAIDs (Nonsteroidal Antiinflammatory)",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Exercise program",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "NSAID (Nonsteroidal anti-inflammatory drugs)",
+              "description": ""
+            }
+          ],
+          "start_date": "2009-06",
+          "completion_date": "2012-03",
+          "enrollment": 90,
+          "primary_sponsor": "Grupo Rehabilitacion en Salud",
+          "has_results": true,
+          "primary_outcome": "Visual Analogue Scale of Pain",
+          "countries": [
+            "Colombia",
+            "Colombia"
+          ]
+        },
+        {
+          "nct_id": "NCT03803371",
+          "title": "Bioequivalence Study of Tramadol Hydrochloride /Paracetamol Tablets Versus Ultracet Tablets",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Ultracet Tablets",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Tramadol hydrochloride 37.5 mg/Paracetamol 325 mg tablets - tablet (Pfizer)",
+              "description": ""
+            }
+          ],
+          "start_date": "2019-03-26",
+          "completion_date": "2019-06-28",
+          "enrollment": 60,
+          "primary_sponsor": "Pfizer",
+          "has_results": false,
+          "primary_outcome": "Area under the tramadol and paracetamol plasma concentration-time curve from time zero to last time point (AUClast)",
+          "countries": [
+            "Brazil"
+          ]
+        },
+        {
+          "nct_id": "NCT04115033",
+          "title": "Randomized Controlled Trial of CES for Fibromyalgia",
+          "overall_status": "ACTIVE_NOT_RECRUITING",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Alpha-stim",
+              "description": ""
+            }
+          ],
+          "start_date": "2020-03-02",
+          "completion_date": "2025-10-31",
+          "enrollment": 50,
+          "primary_sponsor": "VA Office of Research and Development",
+          "has_results": false,
+          "primary_outcome": "Clinical Pain Change",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT07158736",
+          "title": "Genicular Nerve Block for Knee Pain in the ED",
+          "overall_status": "RECRUITING",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Genicular nerve block with bupivacaine and corticosteroids",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Standard of Care",
+              "description": ""
+            }
+          ],
+          "start_date": "2025-07-16",
+          "completion_date": "2026-09-01",
+          "enrollment": 34,
+          "primary_sponsor": "University of Pennsylvania",
+          "has_results": false,
+          "primary_outcome": "Pain level",
+          "countries": [
+            "United States",
+            "United States",
+            "United States",
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT02440399",
+          "title": "To Compare the Efficacy and Patients' Satisfaction for the Treatment of Post Cesarean Pain of Two Protocols: Oral Medications in Fixed Time Interval Administration Versus Spinal Morphine",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Tramadol hydrochloride",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Morphine",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Paracetamol",
+              "description": ""
+            }
+          ],
+          "start_date": "2015-07",
+          "completion_date": "2017-05",
+          "enrollment": 200,
+          "primary_sponsor": "HaEmek Medical Center, Israel",
+          "has_results": false,
+          "primary_outcome": "The efficacy of pain management",
+          "countries": [
+            "Israel"
+          ]
+        },
+        {
+          "nct_id": "NCT06752252",
+          "title": "Ultrasound Guided Paravertebral Block Versus Erector Spinae Block for Postoperative Analgesia After Inguinal Hernia Repair in Pediatric Patients",
+          "overall_status": "RECRUITING",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "ultrasound guided paravertebral block",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Ultrasound guided erector spinae plane block",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "control group C",
+              "description": ""
+            }
+          ],
+          "start_date": "2024-12-30",
+          "completion_date": "2025-12-30",
+          "enrollment": 158,
+          "primary_sponsor": "Zagazig University",
+          "has_results": false,
+          "primary_outcome": "The total amount of rescue analgesia (Ibuprofen consumption)",
+          "countries": [
+            "Egypt",
+            "Egypt"
+          ]
+        },
+        {
+          "nct_id": "NCT05244148",
+          "title": "Two Seawater-based Formulations for Relief of Nasal Congestion in Paediatric Subjects",
+          "overall_status": "TERMINATED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "IP1 - StÃ©rimar BLOCKED NOSE Baby nasal spray",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "IP2 - StÃ©rimar Stop & Protect Cold Baby + standard of care",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Standard of Care",
+              "description": ""
+            }
+          ],
+          "start_date": "2021-11-25",
+          "completion_date": "2023-03-20",
+          "enrollment": 9,
+          "primary_sponsor": "Church & Dwight Company, Inc.",
+          "has_results": false,
+          "primary_outcome": "Change of nasal congestion.",
+          "countries": [
+            "Italy"
+          ]
+        },
+        {
+          "nct_id": "NCT00315848",
+          "title": "The Safety and Efficacy of the Buprenorphine Transdermal Delivery System in Subjects With Osteoarthritis Pain.",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE3",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Buprenorphine transdermal delivery system",
+              "description": ""
+            }
+          ],
+          "start_date": "1996-11",
+          "completion_date": "1999-12",
+          "enrollment": 225,
+          "primary_sponsor": "Purdue Pharma LP",
+          "has_results": false,
+          "primary_outcome": "Pain on average and pain right now scores at days 0, 9, 15, 30, 45, 60, or at early termination.",
+          "countries": [
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT01586143",
+          "title": "Clinical Study Comparing the Efficacy of Transbuccal Paracetamol 125 mg Versus Paracetamol Injection 1g in Slow Infusion IV in Patients With Acute Pain",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE3",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "paracetamol",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Placebo",
+              "description": ""
+            }
+          ],
+          "start_date": "2012-05",
+          "completion_date": "2013-05",
+          "enrollment": 43,
+          "primary_sponsor": "University Hospital, Clermont-Ferrand",
+          "has_results": false,
+          "primary_outcome": "Pain score measured by visual analogue scale",
+          "countries": [
+            "France"
+          ]
+        },
+        {
+          "nct_id": "NCT00945815",
+          "title": "S0910 Epratuzumab, Cytarabine, and Clofarabine in Treating Patients With Relapsed or Refractory Acute Lymphoblastic Leukemia",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE2",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "epratuzumab",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "clofarabine",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "cytarabine",
+              "description": ""
+            }
+          ],
+          "start_date": "2010-09",
+          "completion_date": "2017-08",
+          "enrollment": 35,
+          "primary_sponsor": "SWOG Cancer Research Network",
+          "has_results": true,
+          "primary_outcome": "Complete Remission",
+          "countries": [
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT01859715",
+          "title": "Emergency Department (ED) Drug Interaction in Emergency Department Patients",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Oxycodone",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Hydrocodone",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Ondansetron",
+              "description": ""
+            }
+          ],
+          "start_date": "2012-06",
+          "completion_date": "2013-02",
+          "enrollment": 502,
+          "primary_sponsor": "University of Colorado, Denver",
+          "has_results": true,
+          "primary_outcome": "Difference in Clinically Significant Visual Analogue Scale for Pain and Nausea Change Between CYP2D6 Users and Non-users",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT02711826",
+          "title": "Treg Therapy in Subclinical Inflammation in Kidney Transplantation",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE1",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Polyclonal Regulatory T Cells",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Everolimus",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Tacrolimus",
+              "description": ""
+            }
+          ],
+          "start_date": "2016-09-20",
+          "completion_date": "2023-08-04",
+          "enrollment": 32,
+          "primary_sponsor": "National Institute of Allergy and Infectious Diseases (NIAID)",
+          "has_results": true,
+          "primary_outcome": "Incidence of Banff 2A or Higher Acute Cell-mediated Rejection and/or Acute Antibody Mediated Rejection",
+          "countries": [
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States",
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT01176708",
+          "title": "Intact Liver Innervation and Glucose and Glucagon-like Peptide-1 (GLP-1) Induced Insulin Secretion",
+          "overall_status": "UNKNOWN",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "dipeptidyl peptidase 4 (DPP4) inhibitor",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "oral glucose",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "intravenous glucose",
+              "description": ""
+            }
+          ],
+          "start_date": "2009-07",
+          "completion_date": "2012-12",
+          "enrollment": 30,
+          "primary_sponsor": "University Hospital, Gentofte, Copenhagen",
+          "has_results": false,
+          "primary_outcome": "insulin secretion",
+          "countries": [
+            "Denmark"
+          ]
+        },
+        {
+          "nct_id": "NCT02862691",
+          "title": "Percocet vs. Bupivicaine for Toothaches in the ED",
+          "overall_status": "TERMINATED",
+          "phase": "PHASE2",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Acetaminophen/Oxycodone (Oral analgesic)",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Bupivicaine (Injectable local anesthetic)",
+              "description": ""
+            }
+          ],
+          "start_date": "2016-08-01",
+          "completion_date": "2017-08-01",
+          "enrollment": 2,
+          "primary_sponsor": "Stony Brook University",
+          "has_results": false,
+          "primary_outcome": "Percentage of patients with significant pain relief at the end of the study period",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT05499897",
+          "title": "The Effect of Interscalene Block on Wound Healing and Immunity in Open Shoulder Surgeries",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "ultrasoud guided interscalene block",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "general anesthesia",
+              "description": ""
+            }
+          ],
+          "start_date": "2023-01-01",
+          "completion_date": "2024-01-01",
+          "enrollment": 40,
+          "primary_sponsor": "Yuzuncu Yil University",
+          "has_results": false,
+          "primary_outcome": "interscalene block",
+          "countries": [
+            "Turkey (TÃ¼rkiye)"
+          ]
+        },
+        {
+          "nct_id": "NCT00598234",
+          "title": "Perioperative Pain Control With Celecoxib (Celebrex) in Total Knee Arthroplasty",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Celecoxib (Celebrex)",
+              "description": ""
+            }
+          ],
+          "start_date": "2006-09",
+          "completion_date": "2009-08",
+          "enrollment": 120,
+          "primary_sponsor": "National Taiwan University Hospital",
+          "has_results": false,
+          "primary_outcome": "VAS pain scores, range-of-motion, narcotics usage",
+          "countries": [
+            "Taiwan"
+          ]
+        },
+        {
+          "nct_id": "NCT05088876",
+          "title": "Paracetamol in Addition to WHO Step III Opioids in Chronic Cancer Pain Control",
+          "overall_status": "RECRUITING",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Placebo",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Paracetamol",
+              "description": ""
+            }
+          ],
+          "start_date": "2024-08-28",
+          "completion_date": "2026-07-31",
+          "enrollment": 140,
+          "primary_sponsor": "Insel Gruppe AG, University Hospital Bern",
+          "has_results": false,
+          "primary_outcome": "VAS score (average pain intensity)",
+          "countries": [
+            "Switzerland",
+            "Switzerland"
+          ]
+        },
+        {
+          "nct_id": "NCT01886352",
+          "title": "Intraperitoneal Atomization of Levobupivacaine During Gynaecological Laparoscopic Procedures ; Impact on Pain, Opioid Use and Length of Recovery Room Stay (IPLA).",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Standard Injection of Levobupivacaine in portal sites.",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Additional injection of 0,5% levobupivacaine.",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Intraperitoneal atomization of levobupivacaine.",
+              "description": ""
+            }
+          ],
+          "start_date": "2013-06-26",
+          "completion_date": "2018-12-03",
+          "enrollment": 16,
+          "primary_sponsor": "University Hospital, Ghent",
+          "has_results": false,
+          "primary_outcome": "Post-operative pain intensity after laparoscopic gynaecological surgery in 1-day hospital setting.",
+          "countries": [
+            "Belgium"
+          ]
+        },
+        {
+          "nct_id": "NCT03804047",
+          "title": "KITAMS: Kinesio Tape and Physical Function in Persons With Multiples Sclerosis",
+          "overall_status": "UNKNOWN",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "kinesio tape",
+              "description": ""
+            }
+          ],
+          "start_date": "2019-01-01",
+          "completion_date": "2021-12-31",
+          "enrollment": 24,
+          "primary_sponsor": "Northern Illinois University",
+          "has_results": false,
+          "primary_outcome": "Static Balance Performance",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT03756038",
+          "title": "Benzodiazepines for the Reduction of Distress and Pain During and After Emergency Department Care",
+          "overall_status": "TERMINATED",
+          "phase": "PHASE2",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Placebos",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Lorazepam",
+              "description": ""
+            }
+          ],
+          "start_date": "2019-01-25",
+          "completion_date": "2019-03-27",
+          "enrollment": 1,
+          "primary_sponsor": "Maria Pacella",
+          "has_results": true,
+          "primary_outcome": "Pain Severity in the Emergency Department: Numeric Rating Scale",
+          "countries": [
+            "United States",
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT02198378",
+          "title": "Comparison of MEOPA + Paracetamol Versus Morphine Treatment in Acute Coronary Syndrome Analgesia.",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "MEOPA and paracetamol",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Morphine",
+              "description": ""
+            }
+          ],
+          "start_date": "2014-11",
+          "completion_date": "2017-01",
+          "enrollment": 680,
+          "primary_sponsor": "University Hospital, Toulouse",
+          "has_results": false,
+          "primary_outcome": "Effective analgesia (NRS scoreâ‰¤ 3) at 30 minutes after the start of analgesia",
+          "countries": [
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "France",
+            "Reunion"
+          ]
+        },
+        {
+          "nct_id": "NCT03090152",
+          "title": "Minimal Opioid Use After Total Hip Replacement (THR)",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Periarticular injection (Deep injection)",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Periarticular injection (Superficial injection)",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Bupivacaine",
+              "description": ""
+            }
+          ],
+          "start_date": "2017-03-08",
+          "completion_date": "2019-09-27",
+          "enrollment": 180,
+          "primary_sponsor": "Hospital for Special Surgery, New York",
+          "has_results": true,
+          "primary_outcome": "Opioid Use",
+          "countries": [
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT01641289",
+          "title": "Paracetamol Effect on Oxidative Stress and Renal Function in Severe Malaria",
+          "overall_status": "COMPLETED",
+          "phase": "NA",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Paracetamol",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "No Paracetamol",
+              "description": ""
+            }
+          ],
+          "start_date": "2012-07-10",
+          "completion_date": "2014-09-21",
+          "enrollment": 62,
+          "primary_sponsor": "University of Oxford",
+          "has_results": false,
+          "primary_outcome": "Effect of paracetamol concentrations",
+          "countries": [
+            "Bangladesh",
+            "Bangladesh"
+          ]
+        },
+        {
+          "nct_id": "NCT00404391",
+          "title": "A Study Comparing the Analgesic Activity of Extended Release Hydrocodone/Acetaminophen (VicodinÂ® CR) and Placebo in Subjects With Pain Following Bunionectomy Surgery",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE2",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Hydrocodone/Acetaminophen Extended Release",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Hydrocodone/Acetaminophen Extended Release",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "Placebo",
+              "description": ""
+            }
+          ],
+          "start_date": "2003-10",
+          "completion_date": "2004-03",
+          "enrollment": 210,
+          "primary_sponsor": "Abbott",
+          "has_results": false,
+          "primary_outcome": "Time-interval-weighted sum of pain relief (TOTPAR)score for 0 to 12 hours following the first dose of study drug administration",
+          "countries": [
+            "United States",
+            "United States",
+            "United States",
+            "United States"
+          ]
+        },
+        {
+          "nct_id": "NCT00487110",
+          "title": "Clinical Confirmation of a Pharmacodynamic Interaction Between Tropisetron and Paracetamol",
+          "overall_status": "COMPLETED",
+          "phase": "PHASE4",
+          "study_type": "INTERVENTIONAL",
+          "conditions": [],
+          "interventions": [
+            {
+              "type": null,
+              "name": "Tropisetron",
+              "description": ""
+            },
+            {
+              "type": null,
+              "name": "paracetamol",
+              "description": ""
+            }
+          ],
+          "start_date": "2008-06",
+          "completion_date": "2009-06",
+          "enrollment": 40,
+          "primary_sponsor": "University Hospital, Clermont-Ferrand",
+          "has_results": false,
+          "primary_outcome": "Visual analogue scale score will be taken at 30min, 1h, 2h, 3h and compared for the two groups",
+          "countries": [
+            "France"
+          ]
+        }
+      ],
+      "latest_results": [],
+      "ongoing_trials_count": 0,
+      "completed_trials_count": 0,
+      "terminated_trials_count": 0,
+      "total_enrollment": 26066,
+      "data_source": "ClinicalTrials.gov API",
+      "fetch_timestamp": "2025-11-19T16:49:26.041165"
+    }
+  },
+  "search_result": {
+    "molecule": {
+      "molecule_name": "paracetamol",
+      "generic_name": "paracetamol",
+      "inn_name": null,
+      "commercial_name": "Paracetamol",
+      "iupac_name": "N-(4-hydroxyphenyl)acetamide",
+      "cas_numbers": [
+        "103-90-2"
+      ],
+      "development_codes": [
+        "GTPL5239",
+        "NSC-109028",
+        "STL140694",
+        "SBB043758",
+        "HY-66005",
+        "AC8790",
+        "CCG-38901",
+        "NSC-755853",
+        "NSC109028",
+        "DB00316",
+        "BDBM26197",
+        "SY001162",
+        "MSK7116",
+        "HSDB 3001",
+        "NSC 109028",
+        "DA-70062",
+        "NSC-3991",
+        "FA15502",
+        "BBL005229",
+        "NSC755853",
+        "NSC3991",
+        "AC-23969",
+        "STR00901",
+        "GLXC-10782"
+      ],
+      "synonyms": [
+        "Apamide",
+        "Eneril",
+        "Multin",
+        "acetaminophen",
+        "Algotropyl",
+        "Doliprane",
+        "Servigesic",
+        "Dymadon",
+        "Acetaminofen",
+        "Tabalgin",
+        "Alvedon",
+        "Calpol",
+        "Liquagesic",
+        "Naprinol",
+        "Datril",
+        "Dirox",
+        "Acamol",
+        "Gelocatil",
+        "4-Acetamidophenol",
+        "p-Acetamidophenol",
+        "Valadol",
+        "Paracetamol",
+        "Homoolan",
+        "Anhiba",
+        "103-90-2",
+        "4'-Hydroxyacetanilide",
+        "Acenol",
+        "Anaflon",
+        "N-Acetyl-p-aminophenol",
+        "Injectapap",
+        "Acetalgin",
+        "Febridol",
+        "Tylenol",
+        "Abensanil",
+        "Biocetamol",
+        "APAP",
+        "p-Hydroxyacetanilide",
+        "Acetagesic",
+        "N-(4-Hydroxyphenyl)acetamide",
+        "Panadol",
+        "Febrolin",
+        "p-Acetaminophenol",
+        "Clixodyne",
+        "Lonarid",
+        "Amadil",
+        "Alpiny",
+        "Tempra",
+        "Febrilix",
+        "Pyrinazine",
+        "Anelix"
+      ],
+      "wo_numbers": [],
+      "known_wo_numbers": [],
+      "known_br_numbers": []
+    },
+    "total_patents_found": 0,
+    "total_families": 0,
+    "patents": [],
+    "families": [],
+    "search_engines_used": [
+      "Google Patents",
+      "Lens.org",
+      "INPI Brasil",
+      "Orange Book",
+      "PatentScope"
+    ],
+    "search_timestamp": "2025-11-19T16:55:09.566798",
+    "warnings": [],
+    "errors": []
+  },
+  "validation_report": {
+    "total_patents_found": 0,
+    "patents_in_brazil": 0,
+    "patents_in_usa": 0,
+    "patents_in_europe": 0,
+    "product_patents": 0,
+    "process_patents": 0,
+    "formulation_patents": 0,
+    "use_patents": 0,
+    "consistency_score": 0.425,
+    "gaps_identified": [
+      "Only 1 patent family found - may be incomplete",
+      "âš ï¸ CRITICAL: No patents found in Brazil (BR)",
+      "No patents found in USA (US)",
+      "No product/compound patent identified"
+    ],
+    "recommendations": [
+      "Perform additional INPI Brasil manual search",
+      "Verify if molecule is actually patented",
+      "âš ï¸ Low consistency score - recommend manual verification",
+      "Search for foundational/composition patents",
+      "Search for manufacturing/synthesis patents"
+    ]
+  },
+  "orange_book_entries": [],
+  "inpi_results": [],
+  "statistics": {
+    "total_patents_collected": 0,
+    "unique_patents": 0,
+    "total_families": 0,
+    "duplicate_patents_removed": 0,
+    "attribute_coverage": [],
+    "overall_coverage_score": 0,
+    "patents_by_source": [],
+    "primary_source_percentage": 0,
+    "patents_by_jurisdiction": [],
+    "top_jurisdictions": [],
+    "date_coverage": {
+
+    },
+    "legal_status_distribution": {
+
+    },
+    "legal_status_coverage_percentage": 0,
+    "patent_type_distribution": {
+
+    },
+    "average_family_size": 0,
+    "largest_family_size": 0,
+    "patents_with_families": 0,
+    "family_coverage_percentage": 0,
+    "unique_assignees": 0,
+    "assignee_coverage_percentage": 0,
+    "top_assignees": [],
+    "patents_with_full_dates": 0,
+    "patents_with_assignees": 0,
+    "patents_with_legal_status": 0,
+    "patents_with_abstract": 0,
+    "quality_score": 0,
+    "search_duration_seconds": 422.007569789887,
+    "layer_timings": [],
+    "layers_executed": [],
+    "errors_count": 0,
+    "warnings_count": 0
+  },
+  "export_url": null,
+  "generated_at": "2025-11-19T16:55:09.567873"
+}
