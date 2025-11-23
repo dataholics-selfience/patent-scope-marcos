@@ -30,6 +30,7 @@ API REST para busca de patentes no WIPO PatentScope usando fórmulas moleculares
 ✅ **Busca por molécula** - Fórmula molecular, SMILES ou nome  
 ✅ **Paginação completa** - Navigate por milhares de resultados  
 ✅ **Parser robusto** - Usa Parsel (Grok-like) para lidar com tags que mudam  
+✅ **Grok API Integration** - Parser adaptativo com IA quando tags mudam (opcional)  
 ✅ **API REST JSON** - Envie molécula, receba resultados em JSON  
 ✅ **Retry automático** - Handling de erros e timeouts  
 ✅ **Documentação interativa** - Swagger UI em `/docs`  
@@ -47,6 +48,23 @@ python -m uvicorn app.main:app --reload --port 8000
 ```
 
 Acesse: **http://localhost:8000/docs**
+
+### 🤖 Grok API (Opcional - Parser Adaptativo)
+
+A API inclui integração com Grok para parsing adaptativo quando as tags HTML do PatentScope mudarem.
+
+**Como ativar:**
+1. Obtenha uma chave API Grok em [x.ai](https://x.ai)
+2. Configure a variável de ambiente:
+   ```bash
+   export GROK_API_KEY="seu_grok_api_key"
+   ```
+3. No Railway: Settings → Variables → Add `GROK_API_KEY`
+
+**Como funciona:**
+- Parser tradicional (Parsel) tenta primeiro
+- Se falhar, Grok API analisa o HTML e extrai dados
+- Completamente opcional - funciona sem Grok também
 
 ## 📖 Endpoints
 

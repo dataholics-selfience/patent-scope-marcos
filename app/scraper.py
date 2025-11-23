@@ -4,6 +4,8 @@ from typing import Dict, List, Optional
 from datetime import datetime
 import random
 import time
+import json
+import os
 
 from app.parser import PatentScopeParser
 
@@ -140,6 +142,106 @@ class PatentScopeScraper:
         
         return expanded_query
     
+    async def _parse_with_grok_if_available(self, html: str) -> List[Dict]:
+        """
+        Usa Grok API para parsing adaptativo caso a chave esteja disponível.
+        Fallback para parser tradicional se não disponível.
+        
+        Args:
+            html: HTML para parsear
+            
+        Returns:
+            Lista de resultados
+        """
+        # Primeiro tentar parser tradicional
+        results = self.parser.parse_search_results(html)
+        
+        # Se obteve resultados, retornar
+        if results:
+            return results
+        
+        # Se falhar e Grok API estiver disponível, tentar com Grok
+        grok_api_key = os.getenv("GROK_API_KEY")
+        if not grok_api_key:
+            return results  # Sem Grok, retornar o que tem
+        
+        try:
+            # Chamar Grok API para parsing adaptativo
+            grok_response = await self._call_grok_api(html, grok_api_key)
+            return grok_response
+        except Exception as e:
+            print(f"Grok API falhou: {e}")
+            return results  # Fallback para parser tradicional
+    
+    async def _call_grok_api(self, html: str, api_key: str) -> List[Dict]:
+        """
+        Chama Grok API para parsing inteligente de HTML
+        
+        Args:
+            html: HTML para parsear
+            api_key: Chave API do Grok
+            
+        Returns:
+            Lista de patentes parseadas
+        """
+        # Truncar HTML para não exceder limites da API
+        html_sample = html[:10000]
+        
+        prompt = f"""Parse this HTML from WIPO PatentScope search results and extract patent information.
+Extract the following fields for each patent result:
+- publication_number
+- patent_id (document ID)
+- title
+- abstract
+- applicants (list)
+- inventors (list)
+- publication_date
+- ipc_codes (list)
+
+HTML:
+{html_sample}
+
+Return ONLY a JSON array of objects with these fields. No markdown, no explanations."""
+
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            response = await client.post(
+                "https://api.x.ai/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "model": "grok-beta",
+                    "messages": [
+                        {
+                            "role": "system",
+                            "content": "You are an expert at parsing HTML and extracting structured data. Always return valid JSON."
+                        },
+                        {
+                            "role": "user",
+                            "content": prompt
+                        }
+                    ],
+                    "temperature": 0.1,
+                    "max_tokens": 2000
+                }
+            )
+            
+            if response.status_code == 200:
+                result = response.json()
+                content = result["choices"][0]["message"]["content"]
+                
+                # Tentar extrair JSON da resposta
+                try:
+                    # Remover markdown se houver
+                    content = content.replace("```json", "").replace("```", "").strip()
+                    patents = json.loads(content)
+                    return patents if isinstance(patents, list) else []
+                except:
+                    return []
+            
+            return []
+    
     async def search_by_molecule(
         self,
         molecule: str,
@@ -182,8 +284,8 @@ class PatentScopeScraper:
             # Fazer requisição
             html = await self._fetch_with_retry(self.SEARCH_URL, params)
             
-            # Parsear resultados
-            results = self.parser.parse_search_results(html)
+            # Parsear resultados (usa Grok se disponível e necessário)
+            results = await self._parse_with_grok_if_available(html)
             total_results = self.parser.extract_total_results(html)
             
             # Se não encontrou total, usar tamanho dos resultados
