@@ -248,6 +248,57 @@ async def get_stats():
         }
     }
 
+@app.post("/search/mock", response_model=SearchResponse, tags=["Search"])
+async def search_mock(search_request: MoleculeSearchRequest):
+    """
+    Endpoint MOCK para testar sem scraping real
+    Retorna dados fake para debug
+    """
+    import random
+    
+    # Criar resultados fake
+    fake_results = [
+        PatentResult(
+            patent_id=f"WO2023{random.randint(100000, 999999)}",
+            publication_number=f"WO2023{random.randint(100000, 999999)}A1",
+            title=f"Patent about {search_request.molecule} - Result {i+1}",
+            abstract=f"This invention relates to {search_request.molecule} and its applications...",
+            applicants=[f"Company {chr(65+i)}"],
+            inventors=[f"Dr. John Doe {i+1}"],
+            publication_date="2023-06-29",
+            ipc_codes=["A61K31/00"],
+            url=f"https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023{random.randint(100000, 999999)}",
+            relevance_score=0.95 - (i * 0.1)
+        )
+        for i in range(min(search_request.page_size, 5))
+    ]
+    
+    total_fake = 50  # Total fake de resultados
+    
+    pagination = PaginationInfo(
+        current_page=search_request.page,
+        page_size=search_request.page_size,
+        total_results=total_fake,
+        total_pages=(total_fake + search_request.page_size - 1) // search_request.page_size,
+        has_next=search_request.page < 10,
+        has_previous=search_request.page > 1,
+        next_page=search_request.page + 1 if search_request.page < 10 else None,
+        previous_page=search_request.page - 1 if search_request.page > 1 else None
+    )
+    
+    return SearchResponse(
+        status="success",
+        query=search_request.molecule,
+        results=fake_results,
+        pagination=pagination,
+        metadata={
+            "search_type": "MOCK - Fake data for testing",
+            "duration_ms": 10,
+            "scraped_at": datetime.utcnow().isoformat(),
+            "source": "MOCK API"
+        }
+    )
+
 # Para desenvolvimento local
 if __name__ == "__main__":
     import uvicorn
